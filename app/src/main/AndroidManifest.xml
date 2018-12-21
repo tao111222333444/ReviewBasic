@@ -20,10 +20,14 @@
         <activity android:name=".DialogActivity" android:theme="@style/dialog"/>
 
         <activity android:name=".standard.StandardActivity" android:launchMode="standard"/>
-        <activity android:name=".singletop.SingleTopActivity" android:launchMode="singleTop"/>
-        <activity android:name=".singletop.OtherTopActiivty"
+        <activity android:name=".singleTop.SingleTopActivity" android:launchMode="singleTop"/>
+        <activity android:name=".singleTop.OtherTopActiivty"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTop"/>
+        <activity android:name=".singleTask.SingleTaskActivity" android:launchMode="singleTask"/>
+        <activity android:name=".singleTask.OtherSingleTaskActivity" />
+
+        <activity android:name=".singleInstance.SingleInstanceActivity" android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

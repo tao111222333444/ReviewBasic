@@ -3,7 +3,7 @@ package com.hugo.reviewbasic.standard
 import android.content.Intent
 import android.os.Bundle
 import com.hugo.reviewbasic.*
-import com.hugo.reviewbasic.singletop.SingleTopActivity
+import com.hugo.reviewbasic.singleTop.SingleTopActivity
 import kotlinx.android.synthetic.main.activity_standard.*
 
 /**

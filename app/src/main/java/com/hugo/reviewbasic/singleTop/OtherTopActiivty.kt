@@ -1,4 +1,4 @@
-package com.hugo.reviewbasic.singletop
+package com.hugo.reviewbasic.singleTop
 
 import android.content.Intent
 import android.os.Bundle

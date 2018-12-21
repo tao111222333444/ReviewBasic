@@ -1,10 +1,10 @@
-package com.hugo.reviewbasic.singletop
+package com.hugo.reviewbasic.singleTop
 
 import android.content.Intent
 import android.os.Bundle
 import com.hugo.reviewbasic.BaseActivity
 import com.hugo.reviewbasic.R
-import kotlinx.android.synthetic.main.activity_top.*
+import kotlinx.android.synthetic.main.activity_single_top.*
 
 /**
  * @author  作者：hugo
@@ -16,7 +16,7 @@ class SingleTopActivity: BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_top)
+        setContentView(R.layout.activity_single_top)
         bottom_1.setOnClickListener{
             startActivity(Intent(this, SingleTopActivity::class.java))
         }

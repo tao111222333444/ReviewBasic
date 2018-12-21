@@ -32,6 +32,19 @@
         app:layout_constraintTop_toBottomOf="@id/bottom_standard"
         android:text="进入singleTop"
         />
-
+    <Button
+        android:id="@+id/bottom_single_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottom_single_top"
+        android:text="进入singleTask"
+        />
+    <Button
+        android:id="@+id/bottom_single_instance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bottom_single_task"
+        android:text="进入singleInstance"
+        />
 
 </android.support.constraint.ConstraintLayout>
