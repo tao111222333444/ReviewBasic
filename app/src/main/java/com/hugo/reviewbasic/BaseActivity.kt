@@ -21,7 +21,7 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         LogUtil.i(TAG, "$ActivityName :onCreate 方法-------------------------")
-        LogUtil.i(TAG,"$ActivityName :onCreate:"+javaClass.simpleName +"  TaskId:"+taskId+"  hasCode:"+this.hashCode())
+        LogUtil.i(TAG,"$ActivityName :onCreate:"+javaClass.simpleName +"  TaskId:"+taskId + "   TaskNum:"+LogUtil.getTask(this)+"  hasCode:"+this.hashCode())
         dumpTaskAffinity()
         setTitle("$ActivityName")
     }
@@ -59,7 +59,7 @@ open class BaseActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         LogUtil.i(TAG,"$ActivityName :onNewIntent 方法-------------------------")
-        LogUtil.i(TAG,"$ActivityName :onNewIntent："+javaClass.simpleName +"  TaskId:"+taskId+"  hasCode:"+this.hashCode())
+        LogUtil.i(TAG,"$ActivityName :onNewIntent："+javaClass.simpleName +"  TaskId:"+taskId+ "   TaskNum:"+LogUtil.getTask(this)+"  hasCode:"+this.hashCode())
         dumpTaskAffinity()
     }
 

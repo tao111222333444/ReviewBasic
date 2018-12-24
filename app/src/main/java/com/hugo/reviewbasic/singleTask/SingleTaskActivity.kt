@@ -1,8 +1,10 @@
 package com.hugo.reviewbasic.singleTask
 
+import android.content.Intent
 import android.os.Bundle
 import com.hugo.reviewbasic.BaseActivity
 import com.hugo.reviewbasic.R
+import kotlinx.android.synthetic.main.activity_single_top.*
 
 /**
  * @author 作者：hugo
@@ -15,6 +17,12 @@ class SingleTaskActivity :BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_task)
+        bottom_1.setOnClickListener {
+            startActivity(Intent(this,SingleTaskActivity::class.java))
+        }
+        bottom_2.setOnClickListener {
+            startActivity(Intent(this,OtherSingleTaskActivity::class.java))
+        }
     }
 
 }

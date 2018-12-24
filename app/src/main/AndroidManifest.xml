@@ -25,7 +25,12 @@
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTop"/>
         <activity android:name=".singleTask.SingleTaskActivity" android:launchMode="singleTask"/>
-        <activity android:name=".singleTask.OtherSingleTaskActivity" />
+        <activity android:name=".singleTask.OtherSingleTaskActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.hugo.OtherSingleTaskActivity"
+            />
+        <activity android:name=".singleTask.OtherActivity"/>
+
 
         <activity android:name=".singleInstance.SingleInstanceActivity" android:launchMode="singleInstance"/>
     </application>
