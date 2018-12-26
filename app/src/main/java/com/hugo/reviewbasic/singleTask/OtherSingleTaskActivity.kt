@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.hugo.reviewbasic.BaseActivity
 import com.hugo.reviewbasic.R
-import kotlinx.android.synthetic.main.activity_single_top.*
+import kotlinx.android.synthetic.main.activity_other_task.*
 
 /**
  * @author  作者：hugo
@@ -17,10 +17,10 @@ class OtherSingleTaskActivity:BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_other_task)
-        bottom_1.setOnClickListener {
+        button_1.setOnClickListener {
             startActivity(Intent(this,SingleTaskActivity::class.java))
         }
-        bottom_2.setOnClickListener {
+        button_2.setOnClickListener {
             startActivity(Intent(this,OtherActivity::class.java))
         }
     }

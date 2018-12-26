@@ -21,50 +21,50 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         LogUtil.i(TAG, "$ActivityName :onCreate 方法-------------------------")
-        LogUtil.i(TAG,"$ActivityName :onCreate:"+javaClass.simpleName +"  TaskId:"+taskId + "   TaskNum:"+LogUtil.getTask(this)+"  hasCode:"+this.hashCode())
-        dumpTaskAffinity()
+        LogUtil.i(TAG,"$ActivityName :onCreate:"+javaClass.simpleName +"  hasCode:"+this.hashCode() +"  TaskId:"+taskId+ "   TaskNum:"
+                +LogUtil.getTask(this)+"   TaskAffinity:" +dumpTaskAffinity())
         setTitle("$ActivityName")
     }
 
     override fun onStart() {
         super.onStart()
-        LogUtil.i(TAG,"$ActivityName :onStart 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onStart 方法------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onStop() {
         super.onStop()
-        LogUtil.i(TAG,"$ActivityName :onStop 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onStop 方法-------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onRestart() {
         super.onRestart()
-        LogUtil.i(TAG,"$ActivityName :onRestart 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onRestart 方法-------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        LogUtil.i(TAG,"$ActivityName :onDestroy 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onDestroy 方法-------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onResume() {
         super.onResume()
-        LogUtil.i(TAG,"$ActivityName :onResume 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onResume 方法--------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onPause() {
         super.onPause()
-        LogUtil.i(TAG,"$ActivityName :onPause 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onPause 方法--------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
-        LogUtil.i(TAG,"$ActivityName :onNewIntent 方法-------------------------")
-        LogUtil.i(TAG,"$ActivityName :onNewIntent："+javaClass.simpleName +"  TaskId:"+taskId+ "   TaskNum:"+LogUtil.getTask(this)+"  hasCode:"+this.hashCode())
-        dumpTaskAffinity()
+        LogUtil.i(TAG,"$ActivityName :onNewIntent 方法--------------------  hasCode:"+this.hashCode() )
+        LogUtil.i(TAG,"$ActivityName :onNewIntent："+javaClass.simpleName +"  hasCode:"+this.hashCode() +"  TaskId:"+taskId+ "   TaskNum:"
+                +LogUtil.getTask(this)+"   TaskAffinity:" +dumpTaskAffinity())
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {
-        LogUtil.i(TAG,"$ActivityName :onSaveInstanceState 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onSaveInstanceState 方法------------------  hasCode:"+this.hashCode() )
         super.onSaveInstanceState(outState)
         outState?.putString(TAG,"我是onSaveInstanceState()保存的数据")
     }
@@ -73,12 +73,12 @@ open class BaseActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
         LogUtil.i(TAG,"$ActivityName :onRestoreInstanceState 获取数据："+savedInstanceState?.get(TAG))
-        LogUtil.i(TAG,"$ActivityName :onRestoreInstanceState 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onRestoreInstanceState 方法-------------------  hasCode:"+this.hashCode() )
     }
 
     override fun onConfigurationChanged(newConfig: Configuration?) {
         super.onConfigurationChanged(newConfig)
-        LogUtil.i(TAG,"$ActivityName :onConfigurationChanged 方法-------------------------")
+        LogUtil.i(TAG,"$ActivityName :onConfigurationChanged 方法------------------  hasCode:"+this.hashCode() )
         if(newConfig?.orientation == Configuration.ORIENTATION_LANDSCAPE){
             LogUtil.i(TAG,"$ActivityName :onConfigurationChanged 横屏")
             Toast.makeText(this,"横屏",Toast.LENGTH_SHORT).show()
@@ -88,8 +88,13 @@ open class BaseActivity : AppCompatActivity() {
         }
     }
 
-    fun dumpTaskAffinity(){
+    fun dumpTaskAffinity() :String{
         val info = this.packageManager.getActivityInfo(componentName,PackageManager.GET_META_DATA)
-        LogUtil.i(TAG,"$ActivityName:TaskAffinity:"+info.taskAffinity)
+        return info.taskAffinity
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        LogUtil.i(TAG,"$ActivityName :onActivityResult 获取数据："+data.toString()+"   requestCode:$requestCode")
     }
 }

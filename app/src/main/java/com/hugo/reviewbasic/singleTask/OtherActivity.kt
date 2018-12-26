@@ -3,8 +3,9 @@ package com.hugo.reviewbasic.singleTask
 import android.content.Intent
 import android.os.Bundle
 import com.hugo.reviewbasic.BaseActivity
+import com.hugo.reviewbasic.FlagActivity
 import com.hugo.reviewbasic.R
-import kotlinx.android.synthetic.main.activity_single_top.*
+import kotlinx.android.synthetic.main.activity_other_task_1.*
 
 /**
  * @author  作者：hugo
@@ -17,11 +18,14 @@ class OtherActivity :BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_other_task_1)
-        bottom_1.setOnClickListener {
+        button_1.setOnClickListener {
             startActivity(Intent(this,SingleTaskActivity::class.java))
         }
-        bottom_2.setOnClickListener {
+        button_2.setOnClickListener {
             startActivity(Intent(this,OtherSingleTaskActivity::class.java))
         }
+        button_3.setOnClickListener {  startActivity(Intent(this,OtherActivity::class.java)) }
+
+        btn_flag.setOnClickListener { startActivity(Intent(this,FlagActivity::class.java)) }
     }
 }

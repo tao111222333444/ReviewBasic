@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:launchMode="singleTask">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +32,19 @@
         <activity android:name=".singleTask.OtherActivity"/>
 
 
-        <activity android:name=".singleInstance.SingleInstanceActivity" android:launchMode="singleInstance"/>
+        <activity android:name=".singleInstance.SingleInstanceActivity" android:launchMode="singleInstance"
+            android:taskAffinity="com.hugo.aaaaaaaaaaa"
+            />
+
+        <activity android:name=".singleInstance.OtherSingleInstanceActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="con.hugo.instance1"/>
+        <activity android:name=".singleInstance.OtherActivity1"
+            android:launchMode="standard"
+            android:taskAffinity="com.hugo.aaaaaaaaaaa"
+            />
+
+        <activity android:name=".FlagActivity" />
     </application>
 
 </manifest>

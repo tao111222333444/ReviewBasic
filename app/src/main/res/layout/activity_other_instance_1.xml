@@ -4,16 +4,23 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Button
-        android:id="@+id/button66"
+        android:id="@+id/back_instance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="启动OtherInstance"
+        android:text="返回InstanceActivity"
         />
     <Button
-        android:id="@+id/button65"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="启动Other"
-        app:layout_constraintTop_toBottomOf="@id/button66"
+        android:text="启动Standard"
+        app:layout_constraintTop_toBottomOf="@id/back_instance"
+        />
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动OtherSingleInstance"
+        app:layout_constraintTop_toBottomOf="@id/button"
         />
 </android.support.constraint.ConstraintLayout>

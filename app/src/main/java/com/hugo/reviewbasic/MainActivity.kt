@@ -26,19 +26,23 @@ class MainActivity : BaseActivity() {
         }
 
         bottom_standard.setOnClickListener{
-            startActivity(Intent(this, StandardActivity::class.java))
+            startActivityForResult(Intent(this, StandardActivity::class.java),10012)
         }
         bottom_single_top.setOnClickListener{
-            startActivity(Intent(this, SingleTopActivity::class.java))
+            startActivityForResult(Intent(this, SingleTopActivity::class.java),10011)
         }
 
         bottom_single_task.setOnClickListener {
-            startActivity(Intent(this,SingleTaskActivity::class.java))
+            startActivityForResult(Intent(this,SingleTaskActivity::class.java),10001)
         }
 
         bottom_single_instance.setOnClickListener {
-            startActivity(Intent(this,SingleInstanceActivity::class.java))
+            startActivityForResult(Intent(this,SingleInstanceActivity::class.java),10002)
         }
+
+//        val intent =Intent(this,SingleInstanceActivity::class.java)
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//        startActivity(intent)
     }
 
 

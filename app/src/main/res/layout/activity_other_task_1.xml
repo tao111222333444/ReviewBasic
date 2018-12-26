@@ -16,5 +16,19 @@
         android:text="打开OtherSingleTask"
         app:layout_constraintTop_toBottomOf="@id/button_1"
         />
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开OtherActivity"
+        app:layout_constraintTop_toBottomOf="@id/button_2"
+        />
 
+    <Button
+        android:id="@+id/btn_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_3"
+        android:text="启动 flagActivity"
+        />
 </android.support.constraint.ConstraintLayout>

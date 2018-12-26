@@ -17,11 +17,11 @@ class SingleTopActivity: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_top)
-        bottom_1.setOnClickListener{
+        button_1.setOnClickListener{
             startActivity(Intent(this, SingleTopActivity::class.java))
         }
 
-        bottom_2.setOnClickListener{
+        button_2.setOnClickListener{
             startActivity(Intent(this,OtherTopActiivty::class.java))
         }
 

@@ -53,13 +53,16 @@ public class LogUtil {
         }
         return callingClass;
     }
-    @SuppressLint("NewApi")
     public static Integer getTask(Context context){
         ActivityManager mAm = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
 
-         List<ActivityManager.AppTask> list =  mAm.getAppTasks();
+        List<ActivityManager.AppTask> list = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            list = mAm.getAppTasks();
+
         for (ActivityManager.AppTask appTask:list){
             return appTask.getTaskInfo().numActivities;
+        }
         }
         return -1;
     }
