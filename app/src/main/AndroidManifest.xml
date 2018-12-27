@@ -41,10 +41,13 @@
             android:taskAffinity="con.hugo.instance1"/>
         <activity android:name=".singleInstance.OtherActivity1"
             android:launchMode="standard"
-            android:taskAffinity="com.hugo.aaaaaaaaaaa"
             />
 
         <activity android:name=".FlagActivity" />
+
+        <activity android:name=".TaskAffinity"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.hugo.bbbbb"/>
     </application>
 
 </manifest>

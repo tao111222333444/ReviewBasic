@@ -25,6 +25,8 @@ class StandardActivity : BaseActivity(){
             startActivity(Intent(this, StandardActivity::class.java))
 //            startActivities(intents)
         }
+
+        btn_task_affinity.setOnClickListener { startActivity(Intent(this,TaskAffinity::class.java)) }
     }
 
     override fun onPause() {

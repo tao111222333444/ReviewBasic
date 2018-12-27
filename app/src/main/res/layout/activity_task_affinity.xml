@@ -3,19 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="进入standard"
-        />
-
     <Button
         android:id="@+id/btn_task_affinity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/button"
-        android:text="启动 taskAffinity"
+        android:text="启动一个  TaskAffinity"
+        />
+    <Button
+        android:id="@+id/btn_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动一个  standard"
+        app:layout_constraintTop_toBottomOf="@id/btn_task_affinity"
         />
 </android.support.constraint.ConstraintLayout>
