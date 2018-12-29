@@ -21,7 +21,7 @@ class SingleTaskActivity :BaseActivity(){
             startActivity(Intent(this,SingleTaskActivity::class.java))
         }
         button_2.setOnClickListener {
-            startActivityForResult(Intent(this,OtherSingleTaskActivity::class.java),10021)
+            startActivity(Intent(this,OtherSingleTaskActivity::class.java))
         }
         button_3.setOnClickListener {  startActivityForResult(Intent(this,OtherActivity::class.java),10022)}
     }
