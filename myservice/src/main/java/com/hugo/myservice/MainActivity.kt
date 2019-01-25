@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.IBinder
 import android.widget.ScrollView
 import android.widget.Toast
+import com.hugo.myservice.MyService.MyIBinder
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -56,10 +57,14 @@ class MainActivity : AppCompatActivity() {
     class MyServiceConnection:ServiceConnection{
         val TAG = "hugo"
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
+           var binder = service as MyIBinder
+            binder.invokeMethodInMyService()
+            //这个是绑定服务时回调接收 IBinder 实例用的
             LogUtil.i(TAG,"onServiceConnected------  ComponentName:$name")
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
+            //这个是当出现意外和绑定服务断开时的回调
             LogUtil.i(TAG,"onServiceDisconnected------  ComponentName:$name")
         }
 

@@ -17,11 +17,11 @@ import android.widget.Toast
 class MyService :BaseService(){
 
 
-//    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-//        Toast.makeText(this,"服务启动了",Toast.LENGTH_SHORT).show()
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        Toast.makeText(this,"服务启动了",Toast.LENGTH_SHORT).show()
 //        LogUtil.i("hugo",this.stopSelfResult(startId).toString())
-//        return super.onStartCommand(intent, flags, startId)
-//    }
+        return super.onStartCommand(intent, flags, startId)
+    }
 
     override fun onBind(intent: Intent?): IBinder? {
         super.onBind(intent)
@@ -33,8 +33,8 @@ class MyService :BaseService(){
 
     override fun onUnbind(intent: Intent?): Boolean {
         Toast.makeText(this,"服务解绑",Toast.LENGTH_SHORT).show()
-        return super.onUnbind(intent)
-//        return true
+//        return super.onUnbind(intent)
+        return true
     }
 
     public interface MyIBinder{
@@ -48,7 +48,7 @@ class MyService :BaseService(){
         }
 
         override fun invokeMethodInMyService() {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            LogUtil.i("hugo","invokeMethodInMyService")
         }
 
     }
