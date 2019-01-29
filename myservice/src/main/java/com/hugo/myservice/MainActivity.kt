@@ -7,8 +7,6 @@ import android.content.ServiceConnection
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
-import android.widget.ScrollView
-import android.widget.Toast
 import com.hugo.myservice.MyService.MyIBinder
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -39,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         btn_goto_other.setOnClickListener {
             startActivity(Intent(this,OtherActivity::class.java)) }
+
+
+        btn_intent_service.setOnClickListener {
+            startService(Intent(this,MyIntentService::class.java))
+        }
     }
 
     override fun onPause() {

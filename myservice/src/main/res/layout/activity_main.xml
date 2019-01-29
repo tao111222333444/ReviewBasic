@@ -39,4 +39,11 @@
         android:text="启动OtherActivity"
         app:layout_constraintTop_toBottomOf="@id/btn_unbind_service"
         app:layout_constraintRight_toRightOf="parent"  />
+
+    <Button
+        android:id="@+id/btn_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动IntentService"
+        app:layout_constraintTop_toBottomOf="@id/btn_unbind_service"  />
 </android.support.constraint.ConstraintLayout>
