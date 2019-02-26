@@ -23,9 +23,7 @@ var Snake.size:Int
 
 fun Snake.Companion.foo(){}
 
-class static {
 
-}
     fun main(args: Array<String>) {
         val snake = Snake()
         print(snake.size)
