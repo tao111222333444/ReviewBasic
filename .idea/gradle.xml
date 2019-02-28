@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mybroadcastreceiver" />
             <option value="$PROJECT_DIR$/mykotlinextend" />
             <option value="$PROJECT_DIR$/myservice" />
             <option value="$PROJECT_DIR$/myspeech" />

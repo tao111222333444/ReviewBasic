@@ -1,1 +1,1 @@
-include ':app', ':myservice', ':myspeech', ':mykotlinextend'
+include ':app', ':myservice', ':myspeech', ':mykotlinextend', ':mybroadcastreceiver'

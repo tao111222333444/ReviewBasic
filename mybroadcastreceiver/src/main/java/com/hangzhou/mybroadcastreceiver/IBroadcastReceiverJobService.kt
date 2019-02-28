@@ -63,7 +63,7 @@ class MyJobService : JobService(){
 
 
         KLog.i("onStartJob ===> 结束")
-        return true
+        return false
     }
 
 }
