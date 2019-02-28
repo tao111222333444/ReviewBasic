@@ -12,4 +12,6 @@ object Constants {
 
     const val FILTER_NAME1 ="com.hugo.IBroadcastReceiver1"
     const val FILTER_NAME3 ="IBroadcastReceiver3"
+
+    const val FILTER_NAME_TASK = "IBroadcastReceiverTask"
 }

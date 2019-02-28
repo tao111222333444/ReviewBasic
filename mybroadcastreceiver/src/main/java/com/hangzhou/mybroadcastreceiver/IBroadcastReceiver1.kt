@@ -15,7 +15,7 @@ import android.widget.Toast
 
 class IBroadcastReceiver1: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        KLog.e("onReceive ===>  ")
+        KLog.i("onReceive ===>  ${javaClass.simpleName}")
         StringBuilder().apply {
             append("Action: ${intent?.action}\n")
             append("URI: ${intent?.toUri(Intent.URI_INTENT_SCHEME)}\n")

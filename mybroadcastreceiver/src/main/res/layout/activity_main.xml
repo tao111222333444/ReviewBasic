@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <Button
+      android:id="@+id/button_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="向1发送广播"
+
+      />
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送普通广播"
+        app:layout_constraintTop_toBottomOf="@id/button_1"
+        />
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播"
+        app:layout_constraintTop_toBottomOf="@id/button_2"
+        />
+
+  <Button
+      android:id="@+id/button_task"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="发送耗时广播_不可以处理耗时"
+      app:layout_constraintTop_toBottomOf="@id/button_3"
+      />
+  <Button
+      android:id="@+id/button_task_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="发送耗时广播_可以处理耗时"
+      app:layout_constraintTop_toBottomOf="@id/button_task"
+      />
+</android.support.constraint.ConstraintLayout>

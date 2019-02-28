@@ -13,8 +13,9 @@ import android.widget.Toast
  */
 class IBroadcastReceiver3: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        KLog.i("onReceive ===>  ")
-        abortBroadcast()
+        KLog.i("onReceive ===>  ${javaClass.simpleName}")
+        val bundle =getResultExtras(true)
+        KLog.i("msg ===> ${bundle.getString("aaaa")}")
 
         StringBuilder().apply {
             append("Action: ${intent?.action}\n")
@@ -25,6 +26,8 @@ class IBroadcastReceiver3: BroadcastReceiver() {
                 Toast.makeText(context, log, Toast.LENGTH_LONG).show()
             }
         }
+
+        abortBroadcast()
 
     }
 }
